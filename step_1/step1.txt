@@ -1,6 +1,7 @@
-﻿Step 1
-
+Step 1
 
 Piping is a special form of redirection that is unique to the linux operating system. With pipes, one can send the standard output or standard error of one process/program directly into the standard input of another process/program (instead of to the screen). By chaining multiple pipes together, a pipeline of programs could be made where each individual program would work on one specific part of the whole, effectively creating multithreading without directly using any threads. 
+
 Shared memory on the other hand is a chunk of memory reserved in which multiple programs or threads could read and write. This means that instead of having a linear progression/connection of pipes where one can only ‘talk’ with the other, shared memory allows multiple programs to asynchronously read from the same memory and write to that memory. This means the communication between programs could be much more versatile. 
+
 If I was writing the program, I would definitely choose shared memories for several reasons. Shared memories are fast, because read and write to memory is really fast. Also, as I mentioned above, shared memories are extremely versatile. This is because I could just make one shared memory that every process could read from periodically and do their jobs instead of having to wait for some process to send some data directly to it, eliminating the need of a interface program. Using shared memories also makes multithreading easier because the framework for semaphores is already there. The one bad part about shared memories is that it is much more complicated to implement due to race condition, semaphores/mutex and needs much more base framework code. Regardless, the advantages of using shared memories outweigh the disadvantages.
