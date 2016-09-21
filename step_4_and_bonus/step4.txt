@@ -1,0 +1,20 @@
+﻿Step 4
+
+
+A. The sound is coming from the general direction of North East, or positive x and positive y direction.
+
+
+B. I solved part A by first looking at which hydrophone received the signal first, which is hydrophone C, in the positive y direction. Then hydrophone B receives the signal, in the positive x direction, then hydrophone A receives the signal. By combining A and B we get positive x and y direction.
+
+
+C. The shape makes a half a hyperbola because by taking the difference in arrival between two hydrophones (which serves as the foci of the hyperbola), all the possible point with that time difference makes a hyperbolic shape. However, the difference is sequential - C first then B, not B first then C - so only half of the hyperbola is needed.
+
+
+D. Approximately (3.503, 4.004)
+
+
+E. There are multiple ways of solving this programmatically. 
+    - First is by creating an equation solver that solves the simultaneous equation of [See attachment 2]. 
+    - Second is by converting it into a function, then iterating through every x values of the function and see for which x value the difference of the two functions is 0. 
+    - Third is by iterating through every 2d value in the xy plane and plugging it in the original equation - this method is extremely slow and is not recommended. 
+    - Fourth is by setting the two functions to equal each other resulting to create a 4th degree polynomial. Then one can use several methods to find the roots of the polynomial - e.g. Newton’s Method, bisection method, general iteration, or the quartic formula.
