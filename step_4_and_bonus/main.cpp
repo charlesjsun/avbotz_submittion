@@ -357,7 +357,8 @@ int main()
 	//const double x3 = -1.32;
 	//const double y3 = -4.03;
 
-	const double s = 1481.0;
+	const double s = 1481.0; // Speed of sound in water
+	// t1 is always 0 so it can be ignored
 	const double t2 = 2.63474 * 0.0001 * s;
 	const double t3 = 7.07023 * 0.0001 * s;
 
